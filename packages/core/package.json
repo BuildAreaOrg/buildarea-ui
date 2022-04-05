@@ -4,7 +4,7 @@
   "description": "core system package",
   "author": "Samyak Bakliwal <samyak.b@mtechzilla.com>",
   "homepage": "",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
