@@ -1,5 +1,5 @@
 module.exports = {
-	stories: ["../packages/**/*.stories.tsx"],
+	stories: ["../src/**/*.stories.tsx"],
 
 	// we need to add aliases to webpack so it knows how to follow
 	// to the source of the packages rather than the built version (dist)

@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import { Box } from "@buildarea-ui/core";
+import { Box } from "../Box";
 import type { ComponentStory } from "@storybook/react";
 
 export default { title: "Button" };

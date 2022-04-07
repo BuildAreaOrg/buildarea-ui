@@ -1,4 +1,4 @@
-import { styled } from "@buildarea-ui/core";
+import { styled } from "../stitches.config";
 
 // @ts-ignore typescript v4.6.2 issue with length
 // https://github.com/modulz/stitches/issues/947
