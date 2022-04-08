@@ -4,6 +4,13 @@
 // TODO: Introduce generic color names to be used throughout the system
 
 export const colors = {
+	// Commonly used throughout the library to overwrite easily
+	primary: "#3D25D9",
+	success: "#43D829",
+	info: "#00C9ED",
+	warning: "#FFB405",
+	danger: "#FF4F30",
+
 	slate50: "#f8fafc",
 	slate100: "#f1f5f9",
 	slate200: "#e2e8f0",

@@ -20,7 +20,7 @@ export const Button = styled("button", {
 
 	border: "1px solid $gray300",
 
-	$$primary: "blueviolet",
+	$$primary: "$colors$primary",
 	backgroundColor: "$$primary",
 	color: "white",
 

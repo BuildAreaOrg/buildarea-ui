@@ -1,6 +1,7 @@
 import { Button } from "./Button";
 import { Box } from "../Box";
 import type { ComponentStory } from "@storybook/react";
+import { createTheme } from "../stitches.config";
 
 export default { title: "Button" };
 
@@ -12,9 +13,20 @@ export const Default = Template.bind({});
 
 Default.args = { size: "md" };
 
-export const BlueButton = Template.bind({});
-BlueButton.args = { css: { $$primary: "$colors$blue500" }, size: "md" };
+const theme = createTheme({
+	colors: {
+		primary: "$colors$neutral800",
+	},
+});
 
+export const OverwriteTheme = () => {
+	return (
+		<Box className={theme} css={{ display: "flex", gap: "$4" }}>
+			<Button>Button</Button>
+			<Button outline>Button</Button>
+		</Box>
+	);
+};
 export const AllSizesButton = () => {
 	return (
 		<Box css={{ display: "flex", gap: 8 }}>
