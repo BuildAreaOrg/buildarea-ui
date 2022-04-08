@@ -15,12 +15,15 @@
 	"scripts": {
 		"dev": "BROWSER=none start-storybook -p 6006",
 		"build": "rollup -c",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.8",
 		"@storybook/react": "^6.4.20",
 		"@storybook/testing-library": "0.0.9",
+		"@typescript-eslint/eslint-plugin": "^5.18.0",
+		"@typescript-eslint/parser": "^5.18.0",
 		"babel-loader": "^8.2.4",
 		"eslint": "^8.12.0",
 		"eslint-config-react-app": "^7.0.0",
@@ -44,11 +47,6 @@
 		"printWidth": 100,
 		"useTabs": true,
 		"semi": true
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged && lint-staged"
-		}
 	},
 	"lint-staged": {
 		"*.{js,ts,tsx}": "eslint --quiet --fix --cache"
