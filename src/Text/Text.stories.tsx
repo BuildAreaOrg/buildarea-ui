@@ -5,7 +5,7 @@ export default {
 	title: "Text",
 };
 
-export const HeadingTag = () => (
+export const TextTag = () => (
 	<Text as="h1" fontSize="4xl">
 		Heading 1
 	</Text>
@@ -27,18 +27,18 @@ const FONT_SIZES_VARIANTS: any = [
 	"9xl",
 ];
 
-export const HeadingList = () => {
+export const TextList = () => {
 	return (
 		<Box css={{ display: "flex", flexDirection: "column" }}>
 			{FONT_SIZES_VARIANTS.map((e: any) => (
 				<Text key={`${e}-variant`} fontSize={e}>
-					Lorem ipsum dolor sit amet.
+					{e} Lorem ipsum dolor sit amet.
 				</Text>
 			))}
 		</Box>
 	);
 };
 
-HeadingList.parameters = {
+TextList.parameters = {
 	layout: "padded",
 };
