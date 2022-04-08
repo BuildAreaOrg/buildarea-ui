@@ -14,7 +14,7 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"dev": "BROWSER=none start-storybook -p 6006",
-		"build": "rollup -c",
+		"build": "rm -rf dist && rollup -c",
 		"build-storybook": "build-storybook",
 		"prepare": "husky install"
 	},
