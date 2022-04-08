@@ -3,8 +3,9 @@ import { styled } from "../stitches.config";
 export const Flex = styled("div", {
 	display: "flex",
 
+	gap: "$4",
 	variants: {
-		direction: {
+		dir: {
 			row: {
 				flexDirection: "row",
 			},
@@ -68,7 +69,7 @@ export const Flex = styled("div", {
 		},
 	},
 	defaultVariants: {
-		direction: "row",
+		dir: "row",
 		align: "stretch",
 		justify: "start",
 		wrap: "noWrap",
