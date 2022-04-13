@@ -7,6 +7,8 @@ dist/
 #turbo cache
 .turbo
 
+# Storybook build
+storybook-static
 # testing
 coverage
 
@@ -27,3 +29,4 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 .eslintcache
+.vercel
