@@ -1,13 +1,13 @@
 ## Buildarea Design System
 
-The documentation is under construction now :construction:
+The documentation is still under construction :construction: and in beta. There could be some breaking changes till we release a stable version.
 
-### Install
+### How to install ?
 ```bash
 npm install @buildarea-ui/react @stitches/react@1.2.7
 ```
 
-### Example
+### Getting Started
 
 This library provides various utiltility functions which will help you make beautiful react components.
 
@@ -31,4 +31,4 @@ const SignUp = () => {
 
 ```
 
-For more documentaion on how to use this library you can visit the [Storybook](https://sb.buildarea-ui.com) :link: to follow latest development
+For more documentation on how to use this library, you can visit the [Storybook](https://sb.buildarea-ui.com) :link: to follow the latest development
