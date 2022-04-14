@@ -31,4 +31,4 @@ const SignUp = () => {
 
 ```
 
-For more documentation on how to use this library, you can visit the [Storybook](https://sb.buildarea-ui.com) :link: to follow the latest development
+For more documentation on how to use this library, you can visit the [Storybook](https://sb.buildarea-ui.com) :link: or visit the example section on [Github Repo](https://github.com/BuildAreaOrg/buildarea-ui/tree/main/examples).
