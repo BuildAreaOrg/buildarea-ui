@@ -1,5 +1,34 @@
 ## Buildarea Design System
 
-The documentation is under construction now :construction:
+The documentation is still under construction :construction: and in beta. There could be some breaking changes till we release a stable version.
 
-You can visit the [Storybook](https://sb.buildarea-ui.com) :link: to follow latest development
+### How to install ?
+```bash
+npm install @buildarea-ui/react @stitches/react@1.2.7
+```
+
+### Getting Started
+
+This library provides various utiltility functions which will help you make beautiful react components.
+
+**Overwrite default theme**:
+```js
+import { Button, createTheme } from "@buildrea-ui/react";
+
+const theme = createTheme({
+  colors: {
+    primary: "hsl(126, 100%, 77%)",
+  },
+});
+
+const SignUp = () => {
+  return (
+    <div className={theme}>
+      <Button>Signup</Button>
+    </div>
+  );
+};
+
+```
+
+For more documentation on how to use this library, you can visit the [Storybook](https://sb.buildarea-ui.com) :link: to follow the latest development
