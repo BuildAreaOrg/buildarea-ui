@@ -4,7 +4,7 @@ The documentation is under construction now :construction:
 
 ### Install
 ```bash
-npm install @buildarea-ui/react @stitches/react
+npm install @buildarea-ui/react @stitches/react@1.2.7
 ```
 
 ### Example
