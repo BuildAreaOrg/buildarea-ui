@@ -60,7 +60,8 @@
 		"*.{js,ts,tsx}": "eslint --quiet --fix --cache"
 	},
 	"dependencies": {
-		"@radix-ui/react-accordion": "^0.1.6"
+		"@radix-ui/react-accordion": "^0.1.6",
+		"@radix-ui/react-dialog": "^0.1.7"
 	},
 	"publishConfig": {
 		"access": "public"
