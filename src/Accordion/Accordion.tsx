@@ -3,7 +3,7 @@ import { styled, keyframes } from "../stitches.config";
 import type { CSS } from "../stitches.config";
 import { forwardRef } from "react";
 import type { ElementRef, ComponentProps } from "react";
-import ChevronDown from "../Icons/ChevronDown";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const StyledAccordion = styled(AccordionPrimitive.Root, {
 	borderRadius: 6,
@@ -97,7 +97,7 @@ const StyledContent = styled(AccordionPrimitive.Content, {
 	},
 });
 
-const StyledChevron = styled(ChevronDown, {
+const StyledChevron = styled(ChevronDownIcon, {
 	color: "$violet500",
 	boxSize: "$space$4",
 	transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",

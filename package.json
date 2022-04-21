@@ -25,6 +25,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.8",
+		"@radix-ui/react-icons": "^1.1.0",
 		"@stitches/react": "^1.2.7",
 		"@storybook/addon-storysource": "^6.4.21",
 		"@storybook/react": "^6.4.20",
@@ -61,7 +62,8 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-accordion": "^0.1.6",
-		"@radix-ui/react-dialog": "^0.1.7"
+		"@radix-ui/react-dialog": "^0.1.7",
+		"@radix-ui/react-dropdown-menu": "^0.1.6"
 	},
 	"publishConfig": {
 		"access": "public"
