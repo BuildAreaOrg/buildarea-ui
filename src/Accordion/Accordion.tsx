@@ -1,7 +1,7 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { styled, keyframes } from "../stitches.config";
 import type { CSS } from "../stitches.config";
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import type { ElementRef, ComponentProps } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
@@ -12,7 +12,7 @@ const StyledAccordion = styled(AccordionPrimitive.Root, {
 	boxShadow: `0 2px 10px $slate900`,
 });
 
-type AccordionPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Root>;
+type AccordionPrimitiveProps = ComponentProps<typeof AccordionPrimitive.Root>;
 type AccordionProps = AccordionPrimitiveProps & { css?: CSS };
 
 const slideDown = keyframes({
@@ -36,6 +36,8 @@ export const Accordion = forwardRef<ElementRef<typeof StyledAccordion>, Accordio
 		</StyledAccordion>
 	)
 );
+
+Accordion.displayName = "Accordion";
 
 const StyledItem = styled(AccordionPrimitive.Item, {
 	overflow: "hidden",
@@ -105,7 +107,6 @@ const StyledChevron = styled(ChevronDownIcon, {
 });
 
 export const AccordionItem = StyledItem;
-Accordion.displayName = "Accordion";
 
 type AccordionTriggerPrimitiveProps = ComponentProps<typeof AccordionPrimitive.Trigger>;
 type AccordionTriggerProps = AccordionTriggerPrimitiveProps & { css?: CSS };
