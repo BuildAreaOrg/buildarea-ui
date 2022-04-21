@@ -8,3 +8,4 @@ export * from "./Text";
 export * from "./Span";
 export * from "./Accordion";
 export * from "./Menu";
+export * from "./ProgressBar";
