@@ -9,3 +9,4 @@ export * from "./Span";
 export * from "./Accordion";
 export * from "./Menu";
 export * from "./ProgressBar";
+export * from "./AlertDialog";
