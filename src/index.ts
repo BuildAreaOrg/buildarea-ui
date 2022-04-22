@@ -10,3 +10,4 @@ export * from "./Accordion";
 export * from "./Menu";
 export * from "./ProgressBar";
 export * from "./AlertDialog";
+export * from "./Checkbox";
