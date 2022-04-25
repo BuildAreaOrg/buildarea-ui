@@ -18,5 +18,5 @@ export const TextareaDemo = () => {
 };
 
 export default {
-	title: "Textara",
+	title: "Textarea",
 };
