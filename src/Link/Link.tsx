@@ -1,5 +1,5 @@
 import { styled } from "../stitches.config";
-import { Text } from "../index";
+import { Text } from "../Text";
 
 export const Link = styled("a", {
 	alignItems: "center",
