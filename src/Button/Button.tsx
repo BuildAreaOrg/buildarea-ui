@@ -1,6 +1,5 @@
 import { styled } from "../stitches.config";
 
-// @ts-ignore typescript v4.6.2 issue with length
 // https://github.com/modulz/stitches/issues/947
 export const Button = styled("button", {
 	// mini reset
