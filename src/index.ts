@@ -16,3 +16,4 @@ export * from "./Textarea";
 export * from "./Label";
 export * from "./Popover";
 export * from "./Link";
+export * from "./ContextMenu";
