@@ -9,12 +9,9 @@ export const InputDemo = () => {
 				<Input size="2" placeholder="Size 2" />
 			</Flex>
 			<Flex align="start" css={{ gap: "$6", mt: "$6" }}>
-				<Input size="1" placeholder="Ghost" variant="ghost" />
-				<Input size="2" placeholder="Ghost" variant="ghost" />
-			</Flex>
-			<Flex align="start" css={{ gap: "$6", mt: "$6" }}>
-				<Input placeholder="Invalid" state="invalid" />
-				<Input placeholder="Valid" state="valid" />
+				<Input placeholder="Success" state="success" />
+				<Input placeholder="Warning" state="warning" />
+				<Input placeholder="Error" state="error" />
 			</Flex>
 			<Flex align="start" css={{ gap: "$6", mt: "$6" }}>
 				<Input placeholder="Cursor default" cursor="default" />
