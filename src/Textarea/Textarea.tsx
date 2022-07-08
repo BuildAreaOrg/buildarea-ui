@@ -7,16 +7,13 @@ export const Textarea = styled("textarea", {
 	fontFamily: "inherit",
 	margin: "0",
 	outline: "none",
-	p: "$1",
-	width: "100%",
+	p: "20px",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
-	backgroundColor: "$slate50",
+	backgroundColor: "hsl(120, 1%, 14%)",
 	boxShadow: "inset 0 0 0 1px $colors$slate700",
-	color: "black",
+	color: "white",
 	fontVariantNumeric: "tabular-nums",
 	position: "relative",
-	minHeight: 80,
-	resize: "vertical",
 
 	"&:focus": {
 		boxShadow: "inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800",
@@ -28,15 +25,17 @@ export const Textarea = styled("textarea", {
 	"&:disabled": {
 		pointerEvents: "none",
 		backgroundColor: "$slate100",
-		color: "$slate800",
+		color: "white",
 		cursor: "not-allowed",
 		resize: "none",
 		"&::placeholder": {
-			color: "$slate700",
+			color: "white",
 		},
 	},
 	"&:read-only": {
-		backgroundColor: "$slate100",
+		backgroundColor: "hsl(120, 1%, 14%)",
+		color: "white",
+
 		"&:focus": {
 			boxShadow: "inset 0px 0px 0px 1px $colors$slate700",
 		},
@@ -45,22 +44,22 @@ export const Textarea = styled("textarea", {
 	variants: {
 		size: {
 			"1": {
-				borderRadius: "$sm",
 				fontSize: "$sm",
 				lineHeight: "16px",
-				px: "$1",
+				width: 400,
+				height: 150,
 			},
 			"2": {
-				borderRadius: "$md",
 				fontSize: "$base",
 				lineHeight: "20px",
-				px: "$1",
+				width: 600,
+				height: 225,
 			},
 			"3": {
-				borderRadius: "$xl",
 				fontSize: "$lg",
 				lineHeight: "23px",
-				px: "$2",
+				width: 1000,
+				height: 200,
 			},
 		},
 		state: {
