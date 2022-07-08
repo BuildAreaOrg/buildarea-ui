@@ -26,23 +26,9 @@ export const Input = styled("input", {
 	borderRadius: "7px",
 	p: "10px",
 
-	"&:-webkit-autofill": {
-		boxShadow: "inset 0 0 0 1px $colors$blue600, inset 0 0 0 100px $colors$blue300",
-	},
-
-	"&:-webkit-autofill::first-line": {
-		fontFamily: "$untitled",
-		color: "black",
-	},
-
 	"&:focus": {
 		color: "hsl(202, 81%, 56%)",
 		borderColor: "hsl(202, 81%, 56%)",
-		boxShadow: "inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800",
-		"&:-webkit-autofill": {
-			boxShadow:
-				"inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800, inset 0 0 0 100px $colors$blue300",
-		},
 	},
 	"&::placeholder": {
 		color: "$slate900",
@@ -65,17 +51,10 @@ export const Input = styled("input", {
 		size: {
 			"1": {
 				fontSize: "16px",
-
 				lineHeight: "1rem",
-				"&:-webkit-autofill::first-line": {
-					fontSize: "$1",
-				},
 			},
 			"2": {
 				fontSize: "20px",
-				"&:-webkit-autofill::first-line": {
-					fontSize: "$lg",
-				},
 			},
 		},
 
