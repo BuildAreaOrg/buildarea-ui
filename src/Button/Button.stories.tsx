@@ -29,11 +29,24 @@ export const OverwriteTheme = () => {
 };
 export const AllSizesButton = () => {
 	return (
-		<Box css={{ display: "flex", gap: 8 }}>
-			<Button size="sm">Button</Button>
-			<Button size="md">Button</Button>
-			<Button size="lg">Button</Button>
-		</Box>
+		<>
+			<Box css={{ display: "flex", gap: 8 }}>
+				<Button size="sm">Small Button</Button>
+				<Button size="md">Medium Button</Button>
+				<Button size="lg">Large Button</Button>
+			</Box>
+			<Box css={{ display: "flex", gap: 8, mt: "2rem" }}>
+				<Button type="secondary" size="sm">
+					Button
+				</Button>
+				<Button type="secondary" size="md">
+					Button
+				</Button>
+				<Button type="secondary" size="lg">
+					Button
+				</Button>
+			</Box>
+		</>
 	);
 };
 
@@ -51,4 +64,8 @@ export const AllOutlineButton = () => {
 			</Button>
 		</Box>
 	);
+};
+
+export const DisabledButton = () => {
+	return <Button disabled>Button</Button>;
 };
