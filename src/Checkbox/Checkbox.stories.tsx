@@ -3,9 +3,7 @@ import { Checkbox } from "./Checkbox";
 
 export const CheckboxDemo = () => (
 	<Flex css={{ height: "$space$4", width: "$full" }}>
-		<Checkbox css={{ bg: "$blue600", color: "$slate200" }} defaultChecked>
-			Hey
-		</Checkbox>
+		<Checkbox defaultChecked />
 		<Checkbox checked />
 	</Flex>
 );
