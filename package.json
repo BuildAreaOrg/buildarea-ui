@@ -1,6 +1,6 @@
 {
 	"name": "@buildarea-ui/react",
-	"version": "0.0.10",
+	"version": "0.1.0",
 	"description": "Buildarea UI React",
 	"author": "Samyak Bakliwal <samyak.b@mtechzilla.com>",
 	"private": false,
