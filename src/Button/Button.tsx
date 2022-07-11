@@ -19,11 +19,20 @@ export const Button = styled("button", {
 
 	border: "1px solid $gray300",
 
-	$$primary: "$colors$primary",
+	$$primary: "$colors$primary200",
 	backgroundColor: "$$primary",
 	color: "white",
 
-	borderRadius: "$default",
+	py: "8px",
+	borderRadius: "7px",
+	"&:hover": {
+		$$primary: "$colors$primary300",
+	},
+	"&:active": {
+		$$primary: "$colors$primary100",
+		color: "black",
+	},
+
 	variants: {
 		outline: {
 			true: {
@@ -31,21 +40,41 @@ export const Button = styled("button", {
 				borderColor: "$$primary",
 			},
 		},
+		disabled: {
+			true: {
+				backgroundColor: "hsl(217, 12%, 34%)",
+				color: "black",
+			},
+		},
 		size: {
 			sm: {
 				height: "$space$6",
 				fontSize: "$fontSizes$base",
-				px: "$2",
+				px: "16px",
 			},
 			md: {
 				height: "$space$8",
 				fontSize: "$fontSizes$lg",
-				px: "$3",
+				px: "20px",
 			},
 			lg: {
 				height: "$space$10",
 				fontSize: "$fontSizes$xl",
-				px: "$4",
+				px: "20px",
+			},
+		},
+		type: {
+			secondary: {
+				$$primary: "$colors$secondary200",
+				color: "black",
+				"&:hover": {
+					$$primary: "$colors$secondary400",
+					color: "white",
+				},
+				"&:active": {
+					$$primary: "$colors$secondary300",
+					color: "white",
+				},
 			},
 		},
 	},

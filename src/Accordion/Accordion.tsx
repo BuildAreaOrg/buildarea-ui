@@ -1,6 +1,6 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { styled, keyframes } from "../stitches.config";
-import type { CSS } from "../stitches.config";
+import type { CSS, VariantProps } from "../stitches.config";
 import React, { forwardRef } from "react";
 import type { ElementRef, ComponentProps } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
@@ -8,8 +8,8 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 const StyledAccordion = styled(AccordionPrimitive.Root, {
 	borderRadius: 6,
 	width: 300,
-	backgroundColor: "$slate100",
-	boxShadow: `0 2px 10px $slate900`,
+	backgroundColor: "$overlay500",
+	color: "$primary200",
 });
 
 type AccordionPrimitiveProps = ComponentProps<typeof AccordionPrimitive.Root>;
@@ -69,7 +69,6 @@ const StyledHeader = styled(AccordionPrimitive.Header, {
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 	all: "unset",
 	fontFamily: "inherit",
-	backgroundColor: "transparent",
 	padding: "0 20px",
 	height: 45,
 	flex: 1,
@@ -78,18 +77,30 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 	justifyContent: "space-between",
 	fontSize: 15,
 	lineHeight: 1,
-	color: "$violet700",
-	boxShadow: `0 1px 0 $slate900`,
-	'&[data-state="closed"]': { backgroundColor: "white" },
-	'&[data-state="open"]': { backgroundColor: "white" },
-	"&:hover": { backgroundColor: "$slate50" },
+	color: "white",
+	backgroundColor: "$bgDark300",
+
+	variants: {
+		triggerType: {
+			primary: {
+				color: "$primary200",
+			},
+			secondary: {
+				color: "$secondary200",
+			},
+		},
+	},
+
+	defaultVariants: {
+		triggerType: "primary",
+	},
 });
 
 const StyledContent = styled(AccordionPrimitive.Content, {
 	overflow: "hidden",
 	fontSize: 15,
-	color: "$slate900",
-	backgroundColor: "$slate100",
+	color: "white",
+	backgroundColor: "$overlay300",
 
 	'&[data-state="open"]': {
 		animation: `${slideDown} 250ms cubic-bezier(0.87, 0, 0.13, 1) forwards`,
@@ -109,7 +120,9 @@ const StyledChevron = styled(ChevronDownIcon, {
 export const AccordionItem = StyledItem;
 
 type AccordionTriggerPrimitiveProps = ComponentProps<typeof AccordionPrimitive.Trigger>;
-type AccordionTriggerProps = AccordionTriggerPrimitiveProps & { css?: CSS };
+type AccordionTriggerProps = AccordionTriggerPrimitiveProps & { css?: CSS } & VariantProps<
+		typeof StyledTrigger
+	>;
 
 export const AccordionTrigger = forwardRef<ElementRef<typeof StyledTrigger>, AccordionTriggerProps>(
 	({ children, ...props }, forwardedRef) => (

@@ -9,7 +9,7 @@ export const Input = styled("input", {
 	margin: "0",
 	outline: "none",
 	padding: "0",
-	width: "100%",
+	width: "200px",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
 	"&::before": {
 		boxSizing: "border-box",
@@ -19,102 +19,57 @@ export const Input = styled("input", {
 	},
 
 	// Custom
-	backgroundColor: "$loContrast",
-	boxShadow: "inset 0 0 0 1px $colors$slate700",
-	color: "black",
+	backgroundColor: "$bgDark200",
+	color: "white",
 	fontVariantNumeric: "tabular-nums",
-
-	"&:-webkit-autofill": {
-		boxShadow: "inset 0 0 0 1px $colors$blue600, inset 0 0 0 100px $colors$blue300",
-	},
-
-	"&:-webkit-autofill::first-line": {
-		fontFamily: "$untitled",
-		color: "black",
-	},
+	border: "1px solid $colors$bgLight400",
+	borderRadius: "7px",
+	p: "10px",
 
 	"&:focus": {
-		boxShadow: "inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800",
-		"&:-webkit-autofill": {
-			boxShadow:
-				"inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800, inset 0 0 0 100px $colors$blue300",
-		},
+		color: "hsl(202, 81%, 56%)",
+		borderColor: "hsl(202, 81%, 56%)",
 	},
 	"&::placeholder": {
 		color: "$slate900",
 	},
 	"&:disabled": {
 		pointerEvents: "none",
-		backgroundColor: "$slate200",
-		color: "$slate800",
+		backgroundColor: "$overlay500",
+		color: "$overlay100",
+		borderColor: "$colors$overlay100",
 		cursor: "not-allowed",
 		"&::placeholder": {
 			color: "$slate700",
 		},
 	},
 	"&:read-only": {
-		backgroundColor: "$slate200",
-		"&:focus": {
-			boxShadow: "inset 0px 0px 0px 1px $colors$slate700",
-		},
+		backgroundColor: "$bgDark200",
 	},
 
 	variants: {
 		size: {
 			"1": {
-				borderRadius: "$sm",
-				height: "$space$5",
-				fontSize: "$base",
-				p: "$3",
+				fontSize: "16px",
 				lineHeight: "1rem",
-				"&:-webkit-autofill::first-line": {
-					fontSize: "$1",
-				},
 			},
 			"2": {
-				borderRadius: "$md",
-				height: "$space$6",
-				fontSize: "$lg",
-				p: "$4",
-				lineHeight: "1.2rem",
-				"&:-webkit-autofill::first-line": {
-					fontSize: "$lg",
-				},
+				fontSize: "20px",
 			},
 		},
-		variant: {
-			ghost: {
-				boxShadow: "none",
-				backgroundColor: "transparent",
-				"@hover": {
-					"&:hover": {
-						boxShadow: "inset 0 0 0 1px $colors$slate700",
-					},
-				},
-				"&:focus": {
-					backgroundColor: "$loContrast",
-					boxShadow: "inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800",
-				},
-				"&:disabled": {
-					backgroundColor: "transparent",
-				},
-				"&:read-only": {
-					backgroundColor: "transparent",
-				},
-			},
-		},
+
 		state: {
-			invalid: {
-				boxShadow: "inset 0 0 0 1px $colors$red700",
-				"&:focus": {
-					boxShadow: "inset 0px 0px 0px 1px $colors$red800, 0px 0px 0px 1px $colors$red800",
-				},
+			success: {
+				color: "$success300",
+				borderColor: "$colors$success300",
 			},
-			valid: {
-				boxShadow: "inset 0 0 0 1px $colors$green700",
-				"&:focus": {
-					boxShadow: "inset 0px 0px 0px 1px $colors$green800, 0px 0px 0px 1px $colors$green800",
-				},
+			warning: {
+				color: "$warning300",
+				borderColor: "$colors$warning300",
+			},
+			error: {
+				color: "$error300",
+				borderColor: "$colors$error300",
 			},
 		},
 		cursor: {

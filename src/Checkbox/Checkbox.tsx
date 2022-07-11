@@ -23,10 +23,11 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
 	justifyContent: "center",
 	lineHeight: "1",
 	margin: "0",
+	backgroundColor: "$bgLight400",
 	outline: "none",
 	padding: "0",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
-	color: "$gray700",
+	color: "hsla(216, 44%, 13%, 1)",
 	boxShadow: "inset 0 0 0 1px $colors$slate700",
 	overflow: "hidden",
 	"@hover": {
@@ -37,7 +38,6 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
 	"&:focus": {
 		outline: "none",
 		borderColor: "$red700",
-		boxShadow: "inset 0 0 0 1px $colors$blue900, 0 0 0 1px $colors$blue900",
 	},
 });
 
