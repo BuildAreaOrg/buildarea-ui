@@ -63,7 +63,7 @@ export const Button = styled("button", {
 				px: "20px",
 			},
 		},
-		type: {
+		buttonType: {
 			secondary: {
 				$$primary: "$colors$secondary200",
 				color: "black",

@@ -36,13 +36,13 @@ export const AllSizesButton = () => {
 				<Button size="lg">Large Button</Button>
 			</Box>
 			<Box css={{ display: "flex", gap: 8, mt: "2rem" }}>
-				<Button type="secondary" size="sm">
+				<Button buttonType="secondary" size="sm">
 					Button
 				</Button>
-				<Button type="secondary" size="md">
+				<Button buttonType="secondary" size="md">
 					Button
 				</Button>
-				<Button type="secondary" size="lg">
+				<Button buttonType="secondary" size="lg">
 					Button
 				</Button>
 			</Box>
