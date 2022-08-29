@@ -12,6 +12,7 @@ export * from "./ProgressBar";
 export * from "./AlertDialog";
 export * from "./Checkbox";
 export * from "./Input";
+export * from "./InputGroup";
 export * from "./Textarea";
 export * from "./Label";
 export * from "./Popover";
