@@ -9,7 +9,7 @@ export const Input = styled("input", {
 	margin: "0",
 	outline: "none",
 	padding: "0",
-	width: "200px",
+	width: "100%",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
 	"&::before": {
 		boxSizing: "border-box",
