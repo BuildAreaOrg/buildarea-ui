@@ -13,16 +13,16 @@
 	],
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"dev": "BROWSER=none start-storybook -p 6006",
+		"dev": "cross-env BROWSER=none start-storybook -p 6006",
 		"build": "rimraf dist && rollup -c",
 		"build-storybook": "build-storybook",
 		"prepare": "husky install"
 	},
 	"peerDependencies": {
-		"react": "^16.8 || ^17.0 || ^18.0",
-		"react-dom": "^16.8 || ^17.0 || ^18.0",
+		"@radix-ui/react-icons": ">=1.1.0",
 		"@stitches/react": "1.2.8",
-		"@radix-ui/react-icons": ">=1.1.0"
+		"react": "^16.8 || ^17.0 || ^18.0",
+		"react-dom": "^16.8 || ^17.0 || ^18.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.8",
@@ -73,7 +73,8 @@
 		"@radix-ui/react-dropdown-menu": "^0.1.6",
 		"@radix-ui/react-label": "^0.1.5",
 		"@radix-ui/react-popover": "^0.1.6",
-		"@radix-ui/react-progress": "^0.1.4"
+		"@radix-ui/react-progress": "^0.1.4",
+		"cross-env": "^7.0.3"
 	},
 	"publishConfig": {
 		"access": "public"
