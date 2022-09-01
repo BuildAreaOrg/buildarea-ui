@@ -1,16 +1,16 @@
 import { Flex } from "../Flex";
 import { Avatar } from "../Avatar";
+import { IMAGES } from "../utils/constant";
 
 export default { title: "Avatar" };
+
+const image = IMAGES[0];
 
 export const Default = () => {
 	return (
 		<Flex>
 			<Avatar />
-			<Avatar
-				name="Sara"
-				src="https://media.istockphoto.com/photos/smiling-young-woman-beauty-close-up-portrait-picture-id1280113805?k=20&m=1280113805&s=612x612&w=0&h=4axzFdjwxVoxSCYGDZGgx0ipyhmOd7N4_OEyokFcZiU="
-			/>
+			<Avatar name={image.name} src={image.src} />
 		</Flex>
 	);
 };
@@ -18,27 +18,12 @@ export const Default = () => {
 export const AllSizesAvatar = () => {
 	return (
 		<Flex>
-			<Avatar
-				size="sm"
-				name="Sara"
-				src="https://media.istockphoto.com/photos/smiling-young-woman-beauty-close-up-portrait-picture-id1280113805?k=20&m=1280113805&s=612x612&w=0&h=4axzFdjwxVoxSCYGDZGgx0ipyhmOd7N4_OEyokFcZiU="
-			/>
-			<Avatar
-				name="Sara"
-				src="https://media.istockphoto.com/photos/smiling-young-woman-beauty-close-up-portrait-picture-id1280113805?k=20&m=1280113805&s=612x612&w=0&h=4axzFdjwxVoxSCYGDZGgx0ipyhmOd7N4_OEyokFcZiU="
-			/>
+			<Avatar size="sm" name={image.name} src={image.src} />
+			<Avatar name={image.name} src={image.src} />
 
-			<Avatar
-				size="lg"
-				name="Sara"
-				src="https://media.istockphoto.com/photos/smiling-young-woman-beauty-close-up-portrait-picture-id1280113805?k=20&m=1280113805&s=612x612&w=0&h=4axzFdjwxVoxSCYGDZGgx0ipyhmOd7N4_OEyokFcZiU="
-			/>
+			<Avatar size="lg" name={image.name} src={image.src} />
 
-			<Avatar
-				size="xl"
-				name="Sara"
-				src="https://media.istockphoto.com/photos/smiling-young-woman-beauty-close-up-portrait-picture-id1280113805?k=20&m=1280113805&s=612x612&w=0&h=4axzFdjwxVoxSCYGDZGgx0ipyhmOd7N4_OEyokFcZiU="
-			/>
+			<Avatar size="xl" name={image.name} src={image.src} />
 		</Flex>
 	);
 };
