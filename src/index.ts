@@ -1,4 +1,6 @@
 export * from "./stitches.config";
+export * from "./Avatar";
+export * from "./AvatarGroup";
 export * from "./Box";
 export * from "./Button";
 export * from "./Flex";
