@@ -15,7 +15,7 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
 	width: "$$wh",
 	height: "$$wh",
 	borderRadius: "100%",
-	boxShadow: "inset 0 0 0 4px #4C5461",
+	boxShadow: "inset 0 0 0 4px #4C5461, 0 0 0 1px #4C5461",
 
 	variants: {
 		size: {
@@ -52,7 +52,7 @@ const StyledRadioIndicator = styled(RadioGroupPrimitive.Indicator, {
 		height: "inherit",
 		borderRadius: "50%",
 		backgroundColor: "transparent",
-		boxShadow: "inset 0 0 0 5px $colors$primary200",
+		boxShadow: "inset 0 0 0 5px $colors$primary200,0 0 0 1.5px $colors$primary200",
 	},
 });
 
@@ -81,8 +81,6 @@ const RadioGroupWrapper = styled("div", {
 
 const StyledText = styled("label", {
 	$$fontsize: "1rem",
-
-	color: "#fff",
 	fontSize: "$$fontsize",
 
 	variants: {

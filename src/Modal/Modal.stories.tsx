@@ -62,7 +62,7 @@ const Input = styled("input", {
 	"&:focus": { boxShadow: `0 0 0 2px $colors$violet300` },
 });
 
-export const ModalDemo = () => (
+export const Default = () => (
 	<Modal>
 		<ModalTrigger asChild>
 			<Button key="button">Edit profile</Button>
