@@ -1,6 +1,8 @@
+import type { CSS, VariantProps } from "../stitches.config";
+import React from "react";
 import { styled } from "../stitches.config";
 
-export const Input = styled("input", {
+const StyledInput = styled("input", {
 	// Reset
 	appearance: "none",
 	borderWidth: "0",
@@ -9,7 +11,7 @@ export const Input = styled("input", {
 	margin: "0",
 	outline: "none",
 	padding: "0",
-	width: "200px",
+	width: "100%",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
 	"&::before": {
 		boxSizing: "border-box",
@@ -71,6 +73,16 @@ export const Input = styled("input", {
 				color: "$error300",
 				borderColor: "$colors$error300",
 			},
+			disabled: {
+				pointerEvents: "none",
+				backgroundColor: "$overlay500",
+				color: "$overlay100",
+				borderColor: "$colors$overlay100",
+				cursor: "not-allowed",
+				"&::placeholder": {
+					color: "$slate700",
+				},
+			},
 		},
 		cursor: {
 			default: {
@@ -88,3 +100,16 @@ export const Input = styled("input", {
 		size: "1",
 	},
 });
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
+	VariantProps<typeof StyledInput> & { css?: CSS };
+
+export const Input = React.forwardRef<React.ElementRef<typeof StyledInput>, InputProps>(
+	(props, ref) => {
+		return (
+			<StyledInput {...props} ref={ref} disabled={props?.state === "disabled" || props?.disabled} />
+		);
+	}
+);
+
+Input.displayName = "Input";

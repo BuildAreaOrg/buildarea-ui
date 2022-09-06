@@ -42,7 +42,7 @@ const Text = styled("div", {
 	},
 });
 
-export const PopoverDemo = () => (
+export const Default = () => (
 	<Popover>
 		<PopoverTrigger asChild>
 			<IconButton aria-label="Update dimensions">

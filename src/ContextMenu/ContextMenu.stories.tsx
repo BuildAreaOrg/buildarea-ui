@@ -34,9 +34,9 @@ const RightSlot = styled("div", {
 	":focus > &": { color: "white" },
 	"[data-disabled] &": { color: "$gray600" },
 });
-export default { title: "Accordion" };
+export default { title: "Context Menu" };
 
-export const ContextMenuDemo = () => {
+export const Default = () => {
 	const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
 	const [urlsChecked, setUrlsChecked] = React.useState(false);
 	const [person, setPerson] = React.useState("pedro");

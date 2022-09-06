@@ -9,7 +9,7 @@ import {
 	AlertDialogTitle,
 } from "./AlertDialog";
 
-export const AlertDialogDemo = () => (
+export const DefaultAlertDialog = () => (
 	<AlertDialog>
 		<AlertDialogTrigger asChild>
 			<Button>Delete account</Button>

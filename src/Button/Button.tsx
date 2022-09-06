@@ -17,27 +17,24 @@ export const Button = styled("button", {
 	lineHeight: "1",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
 
-	border: "1px solid $gray300",
-
-	$$primary: "$colors$primary200",
+	$$primary: "$colors$primary300",
 	backgroundColor: "$$primary",
 	color: "white",
 
 	py: "8px",
 	borderRadius: "7px",
 	"&:hover": {
-		$$primary: "$colors$primary300",
+		$$primary: "$colors$primary200",
 	},
 	"&:active": {
-		$$primary: "$colors$primary100",
-		color: "black",
+		$$primary: "$colors$primary300",
 	},
 
 	variants: {
 		outline: {
 			true: {
 				backgroundColor: "transparent",
-				borderColor: "$$primary",
+				boxShadow: "inset 0 0 0 1px $$primary",
 			},
 		},
 		disabled: {
@@ -65,14 +62,13 @@ export const Button = styled("button", {
 		},
 		buttonType: {
 			secondary: {
-				$$primary: "$colors$secondary200",
-				color: "black",
+				$$primary: "$colors$secondary400",
+				color: "white",
 				"&:hover": {
-					$$primary: "$colors$secondary400",
-					color: "white",
+					$$primary: "$colors$secondary300",
 				},
 				"&:active": {
-					$$primary: "$colors$secondary300",
+					$$primary: "$colors$secondary400",
 					color: "white",
 				},
 			},

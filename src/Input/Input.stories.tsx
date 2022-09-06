@@ -1,17 +1,18 @@
 import { Flex } from "../Flex";
 import { Input } from "./Input";
 
-export const InputDemo = () => {
+export const Inputs = () => {
 	return (
 		<>
 			<Flex align="start" css={{ gap: "$6" }}>
-				<Input size="1" placeholder="Size 1" />
-				<Input size="2" placeholder="Size 2" />
+				<Input size={1} placeholder="Size 1" />
+				<Input size={2} placeholder="Size 2" />
 			</Flex>
 			<Flex align="start" css={{ gap: "$6", mt: "$6" }}>
 				<Input placeholder="Success" state="success" />
 				<Input placeholder="Warning" state="warning" />
 				<Input placeholder="Error" state="error" />
+				<Input placeholder="disabled" state="disabled" />
 			</Flex>
 			<Flex align="start" css={{ gap: "$6", mt: "$6" }}>
 				<Input placeholder="Cursor default" cursor="default" />

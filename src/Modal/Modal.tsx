@@ -17,7 +17,7 @@ type ModalProps = ComponentProps<typeof ModalPrimitive.Root> & {
 };
 
 const StyledOverlay = styled(ModalPrimitive.Overlay, {
-	backgroundColor: "$slate50",
+	backgroundColor: "rgba(0,0,0,.5)",
 	position: "fixed",
 	inset: 0,
 	"@media (prefers-reduced-motion: no-preference)": {

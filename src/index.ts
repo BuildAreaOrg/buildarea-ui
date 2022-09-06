@@ -1,4 +1,7 @@
 export * from "./stitches.config";
+export * from "./Radio";
+export * from "./Avatar";
+export * from "./AvatarGroup";
 export * from "./Box";
 export * from "./Button";
 export * from "./Flex";
@@ -12,6 +15,7 @@ export * from "./ProgressBar";
 export * from "./AlertDialog";
 export * from "./Checkbox";
 export * from "./Input";
+export * from "./InputGroup";
 export * from "./Textarea";
 export * from "./Label";
 export * from "./Popover";
