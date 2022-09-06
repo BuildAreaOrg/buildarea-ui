@@ -1,7 +1,7 @@
 import { Flex } from "../Flex";
 import { Input } from "./Input";
 
-export const InputDemo = () => {
+export const Inputs = () => {
 	return (
 		<>
 			<Flex align="start" css={{ gap: "$6" }}>

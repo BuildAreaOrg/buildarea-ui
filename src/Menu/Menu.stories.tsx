@@ -45,7 +45,7 @@ const IconButton = styled("button", {
 	"&:focus": { boxShadow: `0 0 0 2px black` },
 });
 
-export const MenuDemo = () => {
+export const Default = () => {
 	return (
 		<Box>
 			<Menu>

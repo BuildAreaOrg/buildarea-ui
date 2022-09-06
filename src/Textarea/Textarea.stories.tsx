@@ -1,7 +1,7 @@
 import { Flex } from "../Flex";
 import { Textarea } from "./Textarea";
 
-export const TextareaDemo = () => {
+export const AllTextarea = () => {
 	return (
 		<>
 			<Flex dir={"column"} css={{ ai: "flex-start", gap: "$6" }}>

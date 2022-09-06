@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Flex } from "../Flex";
 import { ProgressBar } from "./ProgressBar";
-export const ProgressDemo = () => {
+
+export const AllProgress = () => {
 	const [progress, setProgress] = useState(13);
 
 	useEffect(() => {

@@ -7,7 +7,7 @@ export default { title: "Radio" };
 export const Default = () => {
 	return (
 		<RadioGroup>
-			<Radio value="1" />;
+			<Radio value="1" />
 		</RadioGroup>
 	);
 };
@@ -68,7 +68,7 @@ export const AllSizes = () => {
 	return (
 		<Flex dir="column">
 			<Flex align="center" css={{ gap: "24px" }}>
-				<Text css={{ color: "#fff" }}>Default: </Text>
+				<Text>Default: </Text>
 				<RadioGroup>
 					<Radio value="1" size="sm" />
 				</RadioGroup>
@@ -86,7 +86,7 @@ export const AllSizes = () => {
 			</Flex>
 
 			<Flex align="center" css={{ gap: "24px" }}>
-				<Text css={{ color: "#fff" }}>Default :</Text>
+				<Text>Default :</Text>
 				<RadioGroup>
 					<Radio value="1" id="radio-1" size="sm">
 						Radio
@@ -112,7 +112,7 @@ export const AllSizes = () => {
 				</RadioGroup>
 			</Flex>
 			<Flex align="center" css={{ gap: "24px" }}>
-				<Text css={{ color: "#fff" }}>Selected : </Text>
+				<Text>Selected : </Text>
 				<RadioGroup value="1">
 					<Radio value="1" size="sm" />
 				</RadioGroup>
@@ -129,7 +129,7 @@ export const AllSizes = () => {
 				</RadioGroup>
 			</Flex>
 			<Flex align="center" css={{ gap: "24px" }}>
-				<Text css={{ color: "#fff" }}>Selected :</Text>
+				<Text>Selected :</Text>
 				<RadioGroup value="1">
 					<Radio value="1" size="sm">
 						Radio
@@ -162,8 +162,8 @@ export const onValueChangeProp = () => {
 	//whenever you select radio button onValueChange will be trigger.
 	return (
 		<RadioGroup onValueChange={(value: string) => alert(`current select radio value is ${value}`)}>
-			<Radio value="1" />;
-			<Radio value="2" />;
+			<Radio value="1" />
+			<Radio value="2" />
 		</RadioGroup>
 	);
 };

@@ -1,7 +1,7 @@
 import { Flex } from "../index";
 import { Link } from "./Link";
 
-export const LinkDemo = () => (
+export const Links = () => (
 	<Flex>
 		<Link href="#" variant="blue">
 			Variant blue

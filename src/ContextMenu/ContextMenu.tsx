@@ -15,7 +15,7 @@ const itemStyles = {
 	all: "unset",
 	fontSize: 13,
 	lineHeight: 1,
-	color: "$violet900",
+	color: "black",
 	borderRadius: 3,
 	display: "flex",
 	alignItems: "center",
@@ -31,8 +31,8 @@ const itemStyles = {
 	},
 
 	"&:focus": {
-		backgroundColor: "$violet700",
-		color: "$violet900",
+		backgroundColor: "$colors$primary100",
+		color: "black",
 	},
 };
 
