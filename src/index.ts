@@ -1,4 +1,5 @@
 export * from "./stitches.config";
+export * from "./Radio";
 export * from "./Avatar";
 export * from "./AvatarGroup";
 export * from "./Box";
