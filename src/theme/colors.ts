@@ -5,32 +5,60 @@
 
 export const colors = {
 	// Light mode
-	bgLight100: "hsl(0,0%,99%)",
-	bgLight200: "hsl(0,0%,98%)",
-	bgLight300: "hsl(0,0%,97%)",
-	bgLight400: "hsl(0,0%,95%)",
-	bgLight500: "hsl(0,0%,94%)",
+	bgLight100: "hsl(255, 50%, 98%)",
+	bgLight200: "hsl(260, 33%, 98%)",
+	bgLight300: "hsl(255, 40%, 98%)",
+	bgLight400: "hsl(255, 7%, 88%)",
+	bgLight500: "hsl(255, 4%, 78%)",
 
 	// Dark Mode
-	bgDark100: "hsl(0,0%,20%)",
-	bgDark200: "hsl(0,0%,13%)",
-	bgDark300: "hsl(0,0%,7%)",
-	bgDark400: "hsl(0,0%,5%)",
-	bgDark500: "hsl(0,0%,3%)",
+	bgDark100: "hsl(0, 0%, 30%)",
+	bgDark200: "hsl(0, 0%, 21%)",
+	bgDark300: "hsl(0, 0%, 13%)",
+	bgDark400: "hsl(0, 0%, 11%)",
+	bgDark500: "hsl(0, 0%, 10%)",
 
 	// Primary
-	primary100: "hsl(234, 89%, 74%)",
-	primary200: "hsl(239, 84%, 67%)",
-	primary300: "hsl(243, 75%, 59%)",
-	primary400: "hsl(245, 58%, 51%)",
-	primary500: "hsl(244, 55%, 41%)",
+	primary100: "hsl(215, 90%, 60%)",
+	primary200: "hsl(215, 90%, 55%)",
+	primary300: "hsl(215, 91%, 50%)",
+	primary400: "hsl(215, 90%, 45%)",
+	primary500: "hsl(215, 90%, 40%)",
 
 	// Secondary
-	secondary100: "hsl(202, 81%, 77%)",
-	secondary200: "hsl(202, 81%, 65%)",
-	secondary300: "hsl(202, 81%, 56%)",
-	secondary400: "hsl(202, 63%, 45%)",
-	secondary500: "hsl(202, 63%, 36%)",
+	secondary100: "hsl(256, 88%, 70%)",
+	secondary200: "hsl(256, 89%, 66%)",
+	secondary300: "hsl(255, 89%, 62%)",
+	secondary400: "hsl(255, 69%, 56%)",
+	secondary500: "hsl(256, 54%, 50%)",
+
+	//overlay light
+	overlayLight100: "hsla(0, 0%, 100%,1)",
+	overlayLight200: "hsla(0, 0%, 87%,.2)",
+	overlayLight300: "hsla(0, 0%, 0%,.06)",
+
+	//overlay dark
+	overlayDark100: "hsla(0, 0%, 15%,1)",
+	overlayDark200: "hsla(0, 0%, 0%,.1)",
+	overlayDark300: "hsla(0, 0%, 10%,.1)",
+
+	//button
+	buttonPrimary: "hsl(215, 91%, 50%)",
+	buttonSecondary: "hsl(255, 89%, 62%)",
+
+	//button text
+	buttonTextPrimary: "hsl(0, 0%, 100%)",
+	buttonTextSecondary: "hsl(0, 0%, 99%)",
+
+	//text light
+	textLight100: "hsl(0, 0%, 7%)",
+	textLight200: "hsl(0, 0%, 20%)",
+	textLight300: "hsla(0, 0%, 0%,.5)",
+
+	//text dark
+	textDark100: "hsl(0, 0%, 100%)",
+	textDark200: "hsl(0, 0%, 99%)",
+	textDark300: "hsl(0, 0%, 100%,.2)",
 
 	// Success
 	success100: "hsl(148, 77%, 81%)",
