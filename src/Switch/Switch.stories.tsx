@@ -1,5 +1,4 @@
-import { Flex } from "../Flex";
-import { Switch } from "../Switch";
+import { Switch, Flex } from "../index";
 
 export default { title: "Switch" };
 

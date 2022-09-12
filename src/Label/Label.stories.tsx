@@ -1,5 +1,4 @@
-import { Flex, Input } from "../index";
-import { Label } from "./Label";
+import { Flex, Input, Label } from "../index";
 
 export const Labels = () => (
 	<Flex align="center" css={{ padding: "0 20px", w: "$full" }}>

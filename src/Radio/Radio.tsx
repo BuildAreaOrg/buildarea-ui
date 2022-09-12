@@ -8,14 +8,13 @@ export const RadioGroup = styled(RadioGroupPrimitive.Root, {
 });
 
 const StyledRadio = styled(RadioGroupPrimitive.Item, {
-	$$fill: "#1F2939",
+	$$outlineColor: "$colors$bgLight500",
 	$$wh: "18px",
 	all: "unset",
-	backgroundColor: "$$fill",
 	width: "$$wh",
 	height: "$$wh",
 	borderRadius: "100%",
-	boxShadow: "inset 0 0 0 4px #4C5461, 0 0 0 1px #4C5461",
+	boxShadow: "inset 0 0 0 2px $$outlineColor, 0 0 0 1px $$outlineColor",
 
 	variants: {
 		size: {
@@ -80,25 +79,26 @@ const RadioGroupWrapper = styled("div", {
 });
 
 const StyledText = styled("label", {
-	$$fontsize: "1rem",
+	$$fontsize: "$fontSizes$base",
 	fontSize: "$$fontsize",
+	color: "$textLight200",
 
 	variants: {
 		size: {
 			sm: {
-				$$fontsize: ".9rem",
+				$$fontsize: "$fontSizes$sm",
 			},
 
 			md: {
-				$$fontsize: "1rem",
+				$$fontsize: "$fontSizes$base",
 			},
 
 			lg: {
-				$$fontsize: "1.2rem",
+				$$fontsize: "$fontSizes$lg",
 			},
 
 			xl: {
-				$$fontsize: "1.4rem",
+				$$fontsize: "$fontSizes$xl",
 			},
 		},
 	},

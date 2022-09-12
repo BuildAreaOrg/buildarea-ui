@@ -9,36 +9,27 @@ export const Textarea = styled("textarea", {
 	outline: "none",
 	p: "20px",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
-	backgroundColor: "hsl(120, 1%, 14%)",
-	boxShadow: "inset 0 0 0 1px $colors$slate700",
-	color: "white",
+	backgroundColor: "$bgLight200",
+	boxShadow: "inset 0px 0px 0px 1px $colors$bgLight400",
 	fontVariantNumeric: "tabular-nums",
 	position: "relative",
+	borderRadius: "6px",
+	color: "$textLight100",
 
 	"&:focus": {
-		boxShadow: "inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800",
+		boxShadow: "inset 0px 0px 0px 1px $colors$primary",
 		zIndex: "1",
+		color: "$primary",
 	},
 	"&::placeholder": {
-		color: "$slate900",
+		color: "rgba(0,0,0,.4)",
 	},
 	"&:disabled": {
 		pointerEvents: "none",
-		backgroundColor: "$slate100",
-		color: "white",
+		color: "$overlay100",
+		borderColor: "$colors$overlay100",
 		cursor: "not-allowed",
-		resize: "none",
-		"&::placeholder": {
-			color: "white",
-		},
-	},
-	"&:read-only": {
-		backgroundColor: "hsl(120, 1%, 14%)",
-		color: "white",
-
-		"&:focus": {
-			boxShadow: "inset 0px 0px 0px 1px $colors$slate700",
-		},
+		opacity: 0.5,
 	},
 
 	variants: {

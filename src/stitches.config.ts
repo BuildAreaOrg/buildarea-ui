@@ -1,5 +1,5 @@
 import { createStitches } from "@stitches/react";
-import { colors, space, fontSizes } from "./theme";
+import { colors, space, fontSizes, fontWeights, lineHeights } from "./theme";
 import type * as Stitches from "@stitches/react";
 
 export type { VariantProps } from "@stitches/react";
@@ -11,10 +11,25 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
 		theme: {
 			colors,
 			space,
-
 			fontSizes,
+			fontWeights,
+			lineHeights,
 			sizes: {
 				full: "100%",
+				"3xs": "14rem",
+				"2xs": "16rem",
+				xs: "20rem",
+				sm: "24rem",
+				md: "28rem",
+				lg: "32rem",
+				xl: "36rem",
+				"2xl": "42rem",
+				"3xl": "48rem",
+				"4xl": "56rem",
+				"5xl": "64rem",
+				"6xl": "72rem",
+				"7xl": "80rem",
+				"8xl": "90rem",
 			},
 			radii: {
 				none: "0px",
@@ -90,5 +105,13 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
 				marginTop: value,
 				marginBottom: value,
 			}),
+		},
+		media: {
+			base: "(min-width: 320px)",
+			sm: "(min-width:640px)",
+			md: "(min-width:768px)",
+			lg: "(min-width:1024px)",
+			xl: "(min-width:1280px)",
+			"2xl": "(min-width:1536px)",
 		},
 	});

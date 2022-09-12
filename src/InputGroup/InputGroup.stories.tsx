@@ -1,44 +1,45 @@
 import {
+	Flex,
+	Input,
 	InputGroup,
 	InputLeftAddon,
 	InputLeftElement,
 	InputRightAddon,
 	InputRightElement,
-} from "./InputGroup";
+} from "../index";
 import { PhoneIcon, EnvelopeIcon } from "../Icons";
-import { Flex, Input } from "../index";
 
 export const DeafultInputGroup = () => {
 	return (
 		<Flex dir="column">
 			<InputGroup>
-				<InputLeftElement css={{ color: "#ddd" }}>
+				<InputLeftElement>
 					<PhoneIcon />
 				</InputLeftElement>
-				<Input type="text" placeholder="Phone Number" />
+				<Input type="text" placeholder="Phone Number" css={{ padding: "2rem" }} />
 			</InputGroup>
 
 			<InputGroup>
 				<Input type="email" placeholder="Email" />
-				<InputRightElement css={{ color: "#fafafa" }}>
+				<InputRightElement>
 					<EnvelopeIcon />
 				</InputRightElement>
 			</InputGroup>
 
 			<InputGroup>
-				<InputLeftAddon css={{ color: "#fafafa" }}>https://</InputLeftAddon>
+				<InputLeftAddon>https://</InputLeftAddon>
 				<Input type="password" placeholder="website" />
 			</InputGroup>
 
 			<InputGroup css={{ color: "green" }}>
 				<Input type="password" placeholder="website" />
-				<InputRightAddon css={{ color: "#fafafa" }}>.com</InputRightAddon>
+				<InputRightAddon>.com</InputRightAddon>
 			</InputGroup>
 
 			<InputGroup>
-				<InputLeftAddon css={{ color: "#fafafa" }}>https://</InputLeftAddon>
+				<InputLeftAddon>https://</InputLeftAddon>
 				<Input type="password" placeholder="website" />
-				<InputRightAddon css={{ color: "#fafafa" }}>.com</InputRightAddon>
+				<InputRightAddon>.com</InputRightAddon>
 			</InputGroup>
 		</Flex>
 	);

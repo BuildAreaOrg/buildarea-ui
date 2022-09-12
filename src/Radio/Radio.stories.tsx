@@ -1,6 +1,4 @@
-import { Text } from "../Text";
-import { Flex } from "../Flex";
-import { RadioGroup, Radio } from "./Radio";
+import { RadioGroup, Radio, Text, Flex } from "../index";
 
 export default { title: "Radio" };
 

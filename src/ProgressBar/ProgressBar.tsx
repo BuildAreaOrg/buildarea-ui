@@ -24,6 +24,7 @@ const StyledProgressBar = styled(ProgressPrimitive.Root, {
 	height: "$space$1",
 	overflow: "hidden",
 	borderRadius: "$pill",
+	backgroundColor: "$primary300",
 
 	'&[data-state="indeterminate"]': {
 		backgroundColor: "$slate4",
@@ -45,21 +46,11 @@ const StyledProgressBar = styled(ProgressPrimitive.Root, {
 	},
 
 	variants: {
-		variant: {
-			gray: {
-				background: "gray",
-			},
-			blue: {
-				backgroundColor: "blue",
-			},
-			gradient: {
-				backgroundImage:
-					"linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)",
+		secondary: {
+			true: {
+				background: "$secondary300",
 			},
 		},
-	},
-	defaultVariants: {
-		variant: "gray",
 	},
 });
 

@@ -1,6 +1,7 @@
 import { keyframes, styled } from "../stitches.config";
 import * as ModalPrimitive from "@radix-ui/react-dialog";
 import type { ComponentProps, ReactNode } from "react";
+import * as React from "react";
 
 const overlayShow = keyframes({
 	"0%": { opacity: 0 },

@@ -13,8 +13,7 @@ export const AllProgress = () => {
 	return (
 		<Flex dir="column" css={{ width: 300 }}>
 			<ProgressBar value={progress} />
-			<ProgressBar variant="blue" value={progress} />
-			<ProgressBar variant="gradient" value={progress} />
+			<ProgressBar secondary value={progress} />
 		</Flex>
 	);
 };

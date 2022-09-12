@@ -1,14 +1,20 @@
 import { styled } from "../stitches.config";
 
 export const Badge = styled("div", {
-	$$primary: "hsl(0,0%,75%)",
+	$$primary: "$colors$primary300",
 	backgroundColor: "$$primary",
-	color: "black",
-	padding: "4px 8px",
-	textTransform: "uppercase",
+	color: "$colors$textDark200",
+	textTransform: "capitalize",
+	padding: "5px 9px",
 	fontSize: "$sm",
+	borderRadius: "3px",
 
 	variants: {
+		secondary: {
+			true: {
+				$$primary: "$colors$secondary300",
+			},
+		},
 		outline: {
 			true: {
 				backgroundColor: "transparent",

@@ -5,7 +5,7 @@ import * as SwitchPrimitive from "@radix-ui/react-switch";
 
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
 	$$wh: "11px",
-	$$bgColor: "#4C5461",
+	$$bgColor: "$colors$bgLight100",
 	position: "absolute",
 	left: 0,
 	top: 0,
@@ -35,8 +35,8 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
 });
 
 const StyledSwitch = styled(SwitchPrimitive.Root, {
-	$$bgColor: "#1F2939",
-	$$outlineColor: "#4C5461",
+	$$bgColor: "$colors$bgLight400",
+	$$outlineColor: "$colors$bgLight400",
 	$$width: "32px",
 
 	all: "unset",

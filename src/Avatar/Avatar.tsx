@@ -12,7 +12,7 @@ export const StyledAvatar = styled(AvatarPrimitive.Root, {
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	backgroundColor: "$bgDark100",
+	backgroundColor: "$primary100",
 	boxSizing: "border-box",
 
 	variants: {
@@ -49,7 +49,7 @@ const StyledAvatarFallBack = styled(AvatarPrimitive.Fallback, {
 	height: "100%",
 	display: "flex",
 	alignItems: "center",
-	color: "#eee",
+	color: "$bgLight400",
 	justifyContent: "center",
 });
 

@@ -11,8 +11,8 @@ export const InputLeftElement = styled("div", {
 	position: "absolute",
 	top: "0",
 	height: "100%",
-	pointerEvents: "none",
 	left: 0,
+	color: "$textLight300",
 });
 
 InputLeftElement.displayName = "InputLeftElement";
@@ -25,9 +25,9 @@ export const InputRightElement = styled("div", {
 	minWidth: "48px",
 	position: "absolute",
 	height: "100%",
-	pointerEvents: "none",
 	top: "0",
 	right: "0",
+	color: "$textLight300",
 });
 
 InputRightElement.displayName = "InputRightElement";
@@ -40,17 +40,21 @@ const InputAddon = styled("div", {
 	padding: "0 8px",
 	width: "auto",
 	border: "1px solid $colors$bgLight400",
-	backgroundColor: "$bgDark200",
+	backgroundColor: "$bgLight200",
+	color: "$textLight300",
 });
+
 export const InputLeftAddon = styled(InputAddon, {
 	borderRight: "transparent",
 	borderRadius: "7px 0 0 7px",
+	color: "$textLight300",
 });
 InputLeftAddon.displayName = "InputLeftAddon";
 
 export const InputRightAddon = styled(InputAddon, {
 	borderLeft: "transparent",
 	borderRadius: "0 7px 7px 0",
+	color: "$textLight300",
 });
 
 InputRightAddon.displayName = "InputRightAddon";
@@ -67,7 +71,7 @@ export const InputGroup = React.forwardRef<
 	React.ElementRef<typeof StyledInputGroup>,
 	InputGroupProps
 >(({ children, ...props }, ref) => {
-	const style: CSS = {};
+	let style: CSS = {};
 
 	React.Children.forEach(children, (child: any) => {
 		if (child && child.type.displayName === "InputLeftElement") {
@@ -83,6 +87,9 @@ export const InputGroup = React.forwardRef<
 		if (child && child.type.displayName === "InputRightAddon") {
 			style.borderTopRightRadius = "0";
 			style.borderBottomRightRadius = "0";
+		}
+		if (child.props.css) {
+			style = { ...child.props.css };
 		}
 	});
 

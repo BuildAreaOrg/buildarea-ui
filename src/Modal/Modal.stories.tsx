@@ -1,4 +1,4 @@
-import { styled } from "../stitches.config";
+import { styled, css } from "../stitches.config";
 import {
 	Modal,
 	ModalTrigger,
@@ -6,10 +6,11 @@ import {
 	ModalContent,
 	ModalTitle,
 	ModalClose,
-} from "./Modal";
-import { Button } from "../Button";
-import { Flex } from "../Flex";
-import { css } from "@stitches/react";
+	Input,
+	Label,
+	Button,
+	Flex,
+} from "../index";
 
 const IconButton = styled("button", {
 	all: "unset",
@@ -24,6 +25,7 @@ const IconButton = styled("button", {
 	position: "absolute",
 	top: 10,
 	right: 10,
+	cursor: "pointer",
 
 	"&:hover": { backgroundColor: "$slate500" },
 	"&:focus": { boxShadow: `0 0 0 2px $violet700` },
@@ -31,35 +33,10 @@ const IconButton = styled("button", {
 
 const Fieldset = styled("fieldset", {
 	all: "unset",
-	display: "flex",
-	gap: 20,
+	display: "grid",
+	gridTemplateColumns: "7rem 1fr",
 	alignItems: "center",
-	marginBottom: 15,
-});
-
-const Label = styled("label", {
-	fontSize: 15,
-	color: "$slate800",
-	width: 90,
-	textAlign: "right",
-});
-
-const Input = styled("input", {
-	all: "unset",
-	width: "100%",
-	flex: "1",
-	display: "inline-flex",
-	alignItems: "center",
-	justifyContent: "center",
-	borderRadius: 4,
-	padding: "0 10px",
-	fontSize: 15,
-	lineHeight: 1,
-	color: "$violet900",
-	boxShadow: `0 0 0 1px $colors$violet200`,
-	height: 35,
-
-	"&:focus": { boxShadow: `0 0 0 2px $colors$violet300` },
+	mb: "$6",
 });
 
 export const Default = () => (
@@ -82,13 +59,7 @@ export const Default = () => (
 			</Fieldset>
 			<Flex justify="end" css={{ marginTop: 25 }}>
 				<ModalClose asChild>
-					<Button
-						aria-label="Close"
-						outline
-						css={{ bg: "$green200", color: "$green700", fontWeight: 600, borderColor: "$green200" }}
-					>
-						Save changes
-					</Button>
+					<Button aria-label="Close">Save changes</Button>
 				</ModalClose>
 			</Flex>
 			<ModalClose asChild>
@@ -109,4 +80,4 @@ export const Default = () => (
 	</Modal>
 );
 
-export default { title: "ModalDemo" };
+export default { title: "Modal" };

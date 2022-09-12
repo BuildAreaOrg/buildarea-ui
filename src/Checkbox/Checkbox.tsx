@@ -16,7 +16,7 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
 	},
 	width: "$space$5",
 	height: "$space$5",
-	borderRadius: "$sm",
+	borderRadius: "3px",
 	alignItems: "center",
 	appearance: "none",
 	display: "inline-flex",
@@ -47,7 +47,8 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
 	height: "100%",
 	justifyContent: "center",
 	width: "100%",
-	// color: "BlueViolet",
+	backgroundColor: "$primary300",
+	color: "$bgLight300",
 });
 
 type CheckboxPrimitiveProps = React.ComponentProps<typeof CheckboxPrimitive.Root>;

@@ -1,5 +1,4 @@
-import { Flex } from "../Flex";
-import { Checkbox } from "./Checkbox";
+import { Flex, Checkbox } from "../index";
 
 export const CheckboxDemo = () => (
 	<Flex css={{ height: "$space$4", width: "$full" }}>

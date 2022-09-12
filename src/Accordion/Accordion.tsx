@@ -7,8 +7,7 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const StyledAccordion = styled(AccordionPrimitive.Root, {
 	borderRadius: 6,
-	width: 300,
-	backgroundColor: "$overlay500",
+	width: "30rem",
 	color: "$primary200",
 });
 
@@ -69,16 +68,16 @@ const StyledHeader = styled(AccordionPrimitive.Header, {
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 	all: "unset",
 	fontFamily: "inherit",
-	padding: "0 20px",
+	padding: "$space$8",
 	height: 45,
 	flex: 1,
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "space-between",
-	fontSize: 15,
+	fontSize: "$base",
 	lineHeight: 1,
 	color: "white",
-	backgroundColor: "$bgDark300",
+	backgroundColor: "$overlayLight200",
 
 	variants: {
 		triggerType: {
@@ -98,9 +97,9 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 
 const StyledContent = styled(AccordionPrimitive.Content, {
 	overflow: "hidden",
-	fontSize: 15,
-	color: "white",
-	backgroundColor: "$overlay300",
+	fontSize: "$base",
+	color: "$textLight100",
+	backgroundColor: "$overlayLight100",
 
 	'&[data-state="open"]': {
 		animation: `${slideDown} 250ms cubic-bezier(0.87, 0, 0.13, 1) forwards`,
