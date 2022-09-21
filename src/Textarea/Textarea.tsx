@@ -9,36 +9,27 @@ export const Textarea = styled("textarea", {
 	outline: "none",
 	p: "20px",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
-	backgroundColor: "hsl(120, 1%, 14%)",
-	boxShadow: "inset 0 0 0 1px $colors$slate700",
-	color: "white",
+	backgroundColor: "$bgLight200",
+	border: "1px solid $colors$bgLight400",
 	fontVariantNumeric: "tabular-nums",
 	position: "relative",
+	borderRadius: "6px",
+	color: "$textLight100",
 
 	"&:focus": {
-		boxShadow: "inset 0px 0px 0px 1px $colors$blue800, 0px 0px 0px 1px $colors$blue800",
+		border: "1px solid $primary",
 		zIndex: "1",
+		color: "$primary",
 	},
 	"&::placeholder": {
-		color: "$slate900",
+		color: "rgba(0,0,0,.4)",
 	},
 	"&:disabled": {
 		pointerEvents: "none",
-		backgroundColor: "$slate100",
-		color: "white",
+		color: "$overlay100",
+		borderColor: "$colors$overlay100",
 		cursor: "not-allowed",
-		resize: "none",
-		"&::placeholder": {
-			color: "white",
-		},
-	},
-	"&:read-only": {
-		backgroundColor: "hsl(120, 1%, 14%)",
-		color: "white",
-
-		"&:focus": {
-			boxShadow: "inset 0px 0px 0px 1px $colors$slate700",
-		},
+		opacity: 0.5,
 	},
 
 	variants: {
@@ -63,16 +54,25 @@ export const Textarea = styled("textarea", {
 			},
 		},
 		state: {
-			invalid: {
-				boxShadow: "inset 0 0 0 1px $colors$red700",
-				"&:focus": {
-					boxShadow: "inset 0px 0px 0px 1px $colors$red800, 0px 0px 0px 1px $colors$red800",
-				},
+			success: {
+				color: "$success300",
+				borderColor: "$colors$success300",
 			},
-			valid: {
-				boxShadow: "inset 0 0 0 1px $colors$green700",
-				"&:focus": {
-					boxShadow: "inset 0px 0px 0px 1px $colors$green800, 0px 0px 0px 1px $colors$green800",
+			warning: {
+				color: "$warning300",
+				borderColor: "$colors$warning300",
+			},
+			error: {
+				color: "$error300",
+				borderColor: "$colors$error300",
+			},
+			disabled: {
+				pointerEvents: "none",
+				color: "$overlay100",
+				borderColor: "$colors$overlay100",
+				cursor: "not-allowed",
+				"&::placeholder": {
+					color: "$slate700",
 				},
 			},
 		},

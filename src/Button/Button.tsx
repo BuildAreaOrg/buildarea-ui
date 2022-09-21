@@ -1,7 +1,10 @@
+import React from "react";
 import { styled } from "../stitches.config";
+import { CSS, keyframes, VariantProps } from "@stitches/react";
+import { Span } from "../Span";
 
 // https://github.com/modulz/stitches/issues/947
-export const Button = styled("button", {
+const StyledButton = styled("button", {
 	// mini reset
 	all: "unset",
 
@@ -14,20 +17,22 @@ export const Button = styled("button", {
 	flexShrink: 0,
 	justifyContent: "center",
 	alignItems: "center",
-	lineHeight: "1",
+	flexGrow: 0,
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
-
-	$$primary: "$colors$primary300",
+	cursor: "pointer",
+	$$primary: "$colors$primary",
 	backgroundColor: "$$primary",
-	color: "white",
+	borderRadius: "6px",
+	fontWeight: "$semibold",
+	color: "$buttonTextPrimary",
 
-	py: "8px",
-	borderRadius: "7px",
 	"&:hover": {
-		$$primary: "$colors$primary200",
+		$$primary: "$colors$primary400",
+		outline: "2px solid $colors$primary",
+		outlineOffset: "3px",
 	},
 	"&:active": {
-		$$primary: "$colors$primary300",
+		$$primary: "$colors$primary",
 	},
 
 	variants: {
@@ -35,41 +40,49 @@ export const Button = styled("button", {
 			true: {
 				backgroundColor: "transparent",
 				boxShadow: "inset 0 0 0 1px $$primary",
+				"&:hover": {
+					outline: "none",
+					outlineOffset: "0",
+				},
 			},
 		},
 		disabled: {
 			true: {
-				backgroundColor: "hsl(217, 12%, 34%)",
-				color: "black",
+				color: "$textLight100",
+				opacity: 0.6,
+				pointerEvents: "none",
+				cursor: "not-allowed",
 			},
 		},
 		size: {
 			sm: {
-				height: "$space$6",
-				fontSize: "$fontSizes$base",
-				px: "16px",
+				fontSize: "$xs",
+				height: "$space$8",
+				px: "$space$4",
 			},
 			md: {
-				height: "$space$8",
-				fontSize: "$fontSizes$lg",
-				px: "20px",
+				fontSize: "$sm",
+				height: "$space$10",
+				px: "$space$4",
 			},
 			lg: {
-				height: "$space$10",
-				fontSize: "$fontSizes$xl",
-				px: "20px",
+				fontSize: "$sm",
+				height: "$space$12",
+				px: "$space$8",
 			},
 		},
 		buttonType: {
 			secondary: {
-				$$primary: "$colors$secondary400",
-				color: "white",
+				$$primary: "$colors$secondary",
+				color: "$buttonTextSecondary",
+
 				"&:hover": {
-					$$primary: "$colors$secondary300",
+					$$primary: "$colors$secondary400",
+					outline: "2px solid $colors$secondary",
+					outlineOffset: "3px",
 				},
 				"&:active": {
-					$$primary: "$colors$secondary400",
-					color: "white",
+					$$primary: "$colors$secondary500",
 				},
 			},
 		},
@@ -103,3 +116,65 @@ export const Button = styled("button", {
 		size: "md",
 	},
 });
+
+const loading = keyframes({
+	"0%": { transform: "rotate(0)" },
+	"100%": { transform: "rotate(360deg)" },
+});
+
+const StyledLoader = styled("span", {
+	display: "inline-block",
+	width: "16px",
+	height: "16px",
+	borderRadius: "50%",
+	border: "2px solid currentColor",
+	borderLeft: 0,
+	animation: `${loading} .4s linear infinite`,
+});
+
+type ButtonProps = React.ComponentProps<typeof StyledButton> &
+	VariantProps<typeof StyledButton> & {
+		children: React.ReactNode;
+		leftIcon?: React.ReactElement;
+		rightIcon?: React.ReactElement;
+		css?: CSS;
+		isLoading?: boolean;
+		loadingText?: string;
+	};
+
+export const Button = React.forwardRef<React.ElementRef<typeof StyledButton>, ButtonProps>(
+	({ children, leftIcon, rightIcon, css, isLoading, loadingText, ...props }, ref) => {
+		const gap = `${leftIcon || rightIcon || loadingText ? "$space$2" : 0}`;
+
+		let styles = {};
+
+		if (css) {
+			styles = { gap: gap, ...css };
+		} else {
+			styles = { gap: gap };
+		}
+
+		if (isLoading) {
+			return (
+				<Span css={{ cursor: "not-allowed" }}>
+					<StyledButton ref={ref} {...props} css={styles} disabled>
+						<StyledLoader />
+						<Span>{loadingText}</Span>
+					</StyledButton>
+				</Span>
+			);
+		}
+
+		return (
+			<Span css={{ cursor: "not-allowed" }}>
+				<StyledButton ref={ref} {...props} css={styles}>
+					{leftIcon && leftIcon}
+					{children}
+					{rightIcon && rightIcon}
+				</StyledButton>
+			</Span>
+		);
+	}
+);
+
+Button.displayName = "Button";

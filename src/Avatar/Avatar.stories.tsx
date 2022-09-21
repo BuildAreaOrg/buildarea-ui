@@ -1,5 +1,4 @@
-import { Flex } from "../Flex";
-import { Avatar } from "../Avatar";
+import { Flex, Avatar } from "../index";
 import { IMAGES } from "../utils/constant";
 
 export default { title: "Avatar" };

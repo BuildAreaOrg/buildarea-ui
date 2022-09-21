@@ -1,5 +1,4 @@
-import { Flex } from "../Flex";
-import { Textarea } from "./Textarea";
+import { Textarea, Flex } from "../index";
 
 export const AllTextarea = () => {
 	return (

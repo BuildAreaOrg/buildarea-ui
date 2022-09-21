@@ -1,5 +1,4 @@
 import { styled } from "../stitches.config";
-import { Text } from "../Text";
 
 export const Link = styled("a", {
 	alignItems: "center",
@@ -8,10 +7,14 @@ export const Link = styled("a", {
 	outline: "none",
 	textDecorationLine: "none",
 	textUnderlineOffset: "3px",
-	textDecorationColor: "$slate400",
+	textDecorationColor: "$primary",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
-	lineHeight: "inherit",
 	cursor: "pointer",
+	color: "$primary",
+	fontSize: "$sm",
+	fontWeight: "$medium",
+	lineHeight: "inherit",
+
 	"@hover": {
 		"&:hover": {
 			textDecorationLine: "underline",
@@ -23,41 +26,12 @@ export const Link = styled("a", {
 		outlineOffset: "2px",
 		textDecorationLine: "none",
 	},
-	[`& ${Text}`]: {
-		color: "inherit",
-	},
+
 	variants: {
-		variant: {
-			blue: {
-				color: "$blue900",
-				textDecorationColor: "$blue400",
-				"&:focus": {
-					outlineColor: "$blue800",
-				},
-			},
-			subtle: {
-				color: "$slate900",
-				textDecorationColor: "$slate400",
-				"&:focus": {
-					outlineColor: "$slate800",
-				},
-			},
-			contrast: {
-				color: "black",
-				textDecoration: "underline",
-				textDecorationColor: "$slate400",
-				"@hover": {
-					"&:hover": {
-						textDecorationColor: "$slate700",
-					},
-				},
-				"&:focus": {
-					outlineColor: "$slate800",
-				},
+		secondary: {
+			true: {
+				color: "$secondary",
 			},
 		},
-	},
-	defaultVariants: {
-		variant: "contrast",
 	},
 });

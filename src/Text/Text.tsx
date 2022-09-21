@@ -3,7 +3,7 @@ import { styled } from "../stitches.config";
 export const Text = styled("p", {
 	// Reset
 	lineHeight: 1,
-	fontWeight: 400,
+	fontWeight: "$normal",
 
 	variants: {
 		fontSize: {
@@ -21,12 +21,20 @@ export const Text = styled("p", {
 			"8xl": { fontSize: "$8xl", lineHeight: "1" },
 			"9xl": { fontSize: "$9xl", lineHeight: "1" },
 		},
-		color: {
-			red: { color: "red" },
+		fontWeight: {
+			thin: { fontWeight: "$thin" },
+			extralight: { fontWeight: "$extralight" },
+			light: { fontWeight: "$light" },
+			normal: { fontWeight: "$normal" },
+			medium: { fontWeight: "$medium" },
+			semibold: { fontWeight: "$semibold" },
+			bold: { fontWeight: "$bold" },
+			extrabold: { fontWeight: "$extrabold" },
+			black: { fontWeight: "$black" },
 		},
 	},
 
 	defaultVariants: {
-		fontSize: "base",
+		fontSize: "xs",
 	},
 });

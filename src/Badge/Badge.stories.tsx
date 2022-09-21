@@ -1,5 +1,4 @@
-import { Box } from "../Box";
-import { Badge } from "./Badge";
+import { Box, Badge } from "../index";
 
 export default { title: "Badge" };
 
@@ -8,6 +7,10 @@ export const DefaultBadge = () => {
 		<Box css={{ display: "flex", gap: "$4" }}>
 			<Badge>default</Badge>
 			<Badge outline>default</Badge>
+			<Badge secondary>default</Badge>
+			<Badge secondary outline>
+				default
+			</Badge>
 		</Box>
 	);
 };

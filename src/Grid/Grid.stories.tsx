@@ -1,5 +1,4 @@
-import { Grid } from "./Grid";
-import { Box } from "../Box";
+import { Grid, Box } from "../index";
 
 export default {
 	title: "Grid",
@@ -9,7 +8,7 @@ const List = () => {
 	return (
 		<>
 			{new Array(3).fill("").map((e, i) => (
-				<Box key={`${i}`} css={{ backgroundColor: "$amber300", boxSize: "$space$10" }}>
+				<Box key={`${i}`} css={{ backgroundColor: "$primary", boxSize: "$space$10" }}>
 					{i + 1}
 				</Box>
 			))}

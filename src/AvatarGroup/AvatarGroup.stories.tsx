@@ -1,6 +1,4 @@
-import { Flex } from "../Flex";
-import { Avatar } from "../Avatar";
-import { AvatarGroup } from "./AvatarGroup";
+import { Flex, Avatar, AvatarGroup } from "../index";
 import { IMAGES } from "../utils/constant";
 
 export default { title: "AvatarGroup" };

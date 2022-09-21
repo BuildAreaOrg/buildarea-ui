@@ -1,9 +1,16 @@
 import { Cross2Icon, MixerHorizontalIcon } from "@radix-ui/react-icons";
 import React from "react";
-import { Input, Label } from "../index";
+import {
+	Popover,
+	PopoverArrow,
+	PopoverClose,
+	PopoverContent,
+	PopoverTrigger,
+	Input,
+	Label,
+	Flex,
+} from "../index";
 import { styled } from "../stitches.config";
-import { Popover, PopoverArrow, PopoverClose, PopoverContent, PopoverTrigger } from "./Popover";
-const Flex = styled("div", { display: "flex" });
 
 const IconButton = styled("button", {
 	all: "unset",
@@ -22,8 +29,8 @@ const IconButton = styled("button", {
 });
 const Fieldset = styled("fieldset", {
 	all: "unset",
-	display: "flex",
-	gap: 20,
+	display: "grid",
+	gridTemplateColumns: "8rem 1fr",
 	alignItems: "center",
 });
 
@@ -50,7 +57,7 @@ export const Default = () => (
 			</IconButton>
 		</PopoverTrigger>
 		<PopoverContent sideOffset={5}>
-			<Flex css={{ flexDirection: "column", gap: 10 }}>
+			<Flex dir="column" css={{ gap: 10 }}>
 				<Text bold css={{ marginBottom: 10 }}>
 					Dimensions
 				</Text>

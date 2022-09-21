@@ -10,9 +10,18 @@ const StyledInput = styled("input", {
 	fontFamily: "inherit",
 	margin: "0",
 	outline: "none",
-	padding: "0",
-	width: "100%",
+	px: "$4",
+	py: "$2",
 	WebkitTapHighlightColor: "rgba(0,0,0,0)",
+	fontSize: "$sm",
+	width: "100%",
+	// Custom
+	backgroundColor: "$bgLight200",
+	color: "$textLight100",
+	fontVariantNumeric: "tabular-nums",
+	border: "1px solid $colors$bgLight400",
+	borderRadius: "6px",
+
 	"&::before": {
 		boxSizing: "border-box",
 	},
@@ -20,46 +29,36 @@ const StyledInput = styled("input", {
 		boxSizing: "border-box",
 	},
 
-	// Custom
-	backgroundColor: "$bgDark200",
-	color: "white",
-	fontVariantNumeric: "tabular-nums",
-	border: "1px solid $colors$bgLight400",
-	borderRadius: "7px",
-	p: "10px",
-
 	"&:focus": {
-		color: "hsl(202, 81%, 56%)",
-		borderColor: "hsl(202, 81%, 56%)",
+		color: "$primary",
+		borderColor: "$primary",
 	},
 	"&::placeholder": {
-		color: "$slate900",
+		color: "rgba(0,0,0,.4)",
 	},
 	"&:disabled": {
 		pointerEvents: "none",
-		backgroundColor: "$overlay500",
 		color: "$overlay100",
 		borderColor: "$colors$overlay100",
 		cursor: "not-allowed",
-		"&::placeholder": {
-			color: "$slate700",
-		},
-	},
-	"&:read-only": {
-		backgroundColor: "$bgDark200",
+		opacity: 0.5,
 	},
 
 	variants: {
 		size: {
 			"1": {
-				fontSize: "16px",
-				lineHeight: "1rem",
+				width: "$sm",
 			},
 			"2": {
-				fontSize: "20px",
+				width: "$md",
+			},
+			"3": {
+				width: "$lg",
+			},
+			"4": {
+				width: "$xl",
 			},
 		},
-
 		state: {
 			success: {
 				color: "$success300",
@@ -75,7 +74,6 @@ const StyledInput = styled("input", {
 			},
 			disabled: {
 				pointerEvents: "none",
-				backgroundColor: "$overlay500",
 				color: "$overlay100",
 				borderColor: "$colors$overlay100",
 				cursor: "not-allowed",
@@ -96,9 +94,20 @@ const StyledInput = styled("input", {
 			},
 		},
 	},
-	defaultVariants: {
-		size: "1",
-	},
+});
+
+export const FormHelperText = styled("span", {
+	display: "block",
+	color: "$textLight300",
+	padding: "$1",
+	fontSize: "$sm",
+});
+
+export const FormErrorText = styled("span", {
+	display: "block",
+	color: "$error300",
+	padding: "$1",
+	fontSize: "$sm",
 });
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> &

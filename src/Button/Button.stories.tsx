@@ -1,5 +1,5 @@
-import { Button } from "./Button";
-import { Box } from "../Box";
+import { Button, Flex } from "../index";
+import { EnvelopeIcon } from "../Icons";
 import type { ComponentStory } from "@storybook/react";
 import { createTheme } from "../stitches.config";
 
@@ -15,27 +15,27 @@ Default.args = { size: "md" };
 
 const theme = createTheme({
 	colors: {
-		primary: "$colors$neutral800",
+		primary: "hotpink",
 	},
 });
 
 export const OverwriteTheme = () => {
 	return (
-		<Box className={theme} css={{ display: "flex", gap: "$4" }}>
+		<Flex className={theme} css={{ gap: "$4" }}>
 			<Button>Button</Button>
 			<Button outline>Button</Button>
-		</Box>
+		</Flex>
 	);
 };
 export const AllSizesButton = () => {
 	return (
 		<>
-			<Box css={{ display: "flex", gap: 8 }}>
-				<Button size="sm">Small Button</Button>
-				<Button size="md">Medium Button</Button>
-				<Button size="lg">Large Button</Button>
-			</Box>
-			<Box css={{ display: "flex", gap: 8, mt: "2rem" }}>
+			<Flex css={{ gap: 8 }}>
+				<Button size="sm"> Button</Button>
+				<Button size="md"> Button</Button>
+				<Button size="lg"> Button</Button>
+			</Flex>
+			<Flex css={{ gap: 8, mt: "2rem" }}>
 				<Button buttonType="secondary" size="sm">
 					Button
 				</Button>
@@ -45,14 +45,14 @@ export const AllSizesButton = () => {
 				<Button buttonType="secondary" size="lg">
 					Button
 				</Button>
-			</Box>
+			</Flex>
 		</>
 	);
 };
 
 export const AllOutlineButton = () => {
 	return (
-		<Box css={{ display: "flex", gap: 8 }}>
+		<Flex css={{ gap: 8 }}>
 			<Button size="sm" outline>
 				Button
 			</Button>
@@ -62,10 +62,43 @@ export const AllOutlineButton = () => {
 			<Button size="lg" outline>
 				Button
 			</Button>
-		</Box>
+		</Flex>
 	);
 };
 
 export const DisabledButton = () => {
-	return <Button disabled>Button</Button>;
+	return (
+		<Flex css={{ gap: "$4" }}>
+			<Button disabled>Button</Button>
+			<Button buttonType="secondary" disabled>
+				Button
+			</Button>
+		</Flex>
+	);
+};
+
+export const ButtonWithIcons = () => {
+	return (
+		<Flex css={{ gap: "$4" }}>
+			<Button leftIcon={<EnvelopeIcon />}>Button</Button>
+			<Button rightIcon={<EnvelopeIcon />}>Button</Button>
+		</Flex>
+	);
+};
+
+export const ButtonWithLoading = () => {
+	return (
+		<Flex css={{ gap: "$4" }}>
+			<Button isLoading>Button</Button>
+			<Button isLoading loadingText="Submiting">
+				Button
+			</Button>
+			<Button isLoading outline>
+				Button
+			</Button>
+			<Button isLoading loadingText="Submiting" outline>
+				Button
+			</Button>
+		</Flex>
+	);
 };

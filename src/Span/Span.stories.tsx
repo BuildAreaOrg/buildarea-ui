@@ -1,4 +1,4 @@
-import { Span } from "./Span";
+import { Span } from "./index";
 
 export default {
 	title: "Span",

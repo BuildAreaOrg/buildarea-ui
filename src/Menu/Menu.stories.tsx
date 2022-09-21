@@ -1,5 +1,4 @@
 import { styled } from "../stitches.config";
-import { Box } from "../Box";
 import {
 	Menu,
 	MenuTrigger,
@@ -13,7 +12,8 @@ import {
 	MenuRadioGroup,
 	MenuRadioItem,
 	MenuArrow,
-} from "./Menu";
+	Box,
+} from "../index";
 import {
 	HamburgerMenuIcon,
 	DotFilledIcon,

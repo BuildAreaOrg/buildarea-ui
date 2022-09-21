@@ -1,15 +1,14 @@
-import { Flex } from "../index";
-import { Link } from "./Link";
+import { Flex, Link } from "../index";
 
 export const Links = () => (
-	<Flex>
-		<Link href="#" variant="blue">
-			Variant blue
+	<Flex dir="column">
+		<Link href="#">Primary link</Link>
+		<Link href="#" secondary>
+			Secondary link
 		</Link>
-		<Link variant="contrast">Variant contrast</Link>
-		<Link variant="subtle">Variant subtle</Link>
 	</Flex>
 );
+
 export default {
 	title: "Link",
 };
