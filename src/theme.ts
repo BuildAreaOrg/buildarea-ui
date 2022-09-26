@@ -40,12 +40,9 @@ const colors: Record<string, Tuple<string, 10>> = {
 	],
 };
 
-export const mantineTheme: Partial<MantineTheme> = {
+export const theme: Partial<MantineTheme> = {
 	respectReducedMotion: true,
 	defaultRadius: "md",
 	colors: colors,
 	primaryColor: "primary",
-	components: {
-		Button: {},
-	},
 };
