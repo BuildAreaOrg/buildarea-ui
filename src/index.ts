@@ -1,29 +1,25 @@
-export * from "./stitches.config";
-export * from "./Radio";
-export * from "./Avatar";
-export * from "./AvatarGroup";
-export * from "./Box";
-export * from "./Button";
-export * from "./Badge";
+export * from "./theme";
 export * from "./Flex";
-export * from "./Grid";
-export * from "./Heading";
-export * from "./Text";
-export * from "./Span";
-export * from "./Accordion";
-export * from "./Menu";
-export * from "./ProgressBar";
-export * from "./AlertDialog";
-export * from "./Checkbox";
-export * from "./Input";
-export * from "./InputGroup";
-export * from "./Textarea";
-export * from "./Label";
-export * from "./Popover";
-export * from "./Link";
-export * from "./ContextMenu";
-export * from "./Drawer";
-export * from "./hooks";
-export * from "./Modal";
-export * from "./Switch";
-export * from "./Container";
+/**
+ * breakpoint 576px
+ */
+export const atXs = "@media (min-width: 576px)";
+/**
+ * breakpoint 768px
+ */
+export const atSm = "@media (min-width: 768px)";
+/**
+ * breakpoint 992px
+ */
+export const atMd = "@media (min-width: 992px)";
+/**
+ * breakpoint 1200px
+ */
+export const atLg = "@media (min-width: 1200px)";
+/**
+ * breakpoint 1400px
+ */
+export const atXl = "@media (min-width: 1400px)";
+
+export const primary = "#0C6CF2";
+export const secondary = "#7549F4";
